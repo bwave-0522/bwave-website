@@ -113,6 +113,15 @@
     overflow: hidden;
   }
 
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
   /* Animated wave background */
   .hero-video-bg::before {
     content: '';
@@ -149,6 +158,7 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
+    z-index: 2;
     background: linear-gradient(to bottom, rgba(238,244,251,0.15) 0%, rgba(238,244,251,0) 40%, rgba(238,244,251,0.7) 100%);
   }
 
@@ -605,6 +615,12 @@
 <!-- HERO -->
 <section class="hero" id="Top">
   <div class="hero-video-bg">
+    <video class="hero-video" autoplay muted loop playsinline
+      onerror="this.style.display='none';"
+      poster="">
+      <source src="https://s3.amazonaws.com/webflow-prod-assets/68396e891bed1fac0e519d71/683d2faa32407ea89bd26fae_%E1%84%89%E1%85%B5%E1%84%8F%E1%85%AF%E1%86%AB%E1%84%89%E1%85%B3%2001_1.mp4" type="video/mp4">
+      <source src="https://cdn.prod.website-files.com/68396e891bed1fac0e519d71/683d2faa32407ea89bd26fae_%E1%84%89%E1%85%B5%E1%84%8F%E1%85%AF%E1%86%AB%E1%84%89%E1%85%B3%2001_1-transcode.mp4" type="video/mp4">
+    </video>
     <div class="wave-lines">
       <svg viewBox="0 0 1400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0,150 C100,80 200,220 300,150 C400,80 500,220 600,150 C700,80 800,220 900,150 C1000,80 1100,220 1200,150 C1300,80 1400,220 1400,150 L1400,300 L0,300 Z" fill="rgba(80,130,220,0.3)"/>
