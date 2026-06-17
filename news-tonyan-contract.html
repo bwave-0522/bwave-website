@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News – B.Wave Entertainment</title>
+<title>H.O.T 토니안, 비웨이브와 전속계약 체결 – B.Wave Entertainment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -92,28 +92,23 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
 }
 
 </style>
-<style>
 
-:root {
-  --black: #eef4fb;
-  --off-white: #ffffff;
-  --white: #1530a8;
-  --accent: #1e3fd6;
-  --accent-light: #5170e8;
-  --mid-gray: #7186b8;
-  --nav-height: 72px;
+<style>
+.article-section { max-width: 760px; margin: 0 auto; padding: calc(var(--nav-height) + 60px) 48px 100px; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid-gray); text-decoration: none; margin-bottom: 32px; }
+.back-link:hover { color: var(--accent); }
+.article-date { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; margin-bottom: 16px; display: block; }
+.article-title { font-size: clamp(24px, 4vw, 36px); font-weight: 700; line-height: 1.4; margin-bottom: 32px; }
+.article-img { width: 100%; border-radius: 0; margin-bottom: 36px; display: block; background: #dce6f9; }
+.article-body p { font-size: 15px; line-height: 1.95; color: rgba(21,48,168,0.82); font-weight: 300; margin-bottom: 22px; }
+.article-body ul { margin: 0 0 22px; padding-left: 20px; }
+.article-body li { font-size: 15px; line-height: 1.9; color: rgba(21,48,168,0.82); font-weight: 300; margin-bottom: 8px; }
+.article-source { font-size: 13px; color: var(--mid-gray); margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(21,48,168,0.08); }
+@media(max-width:600px){
+  .article-section{padding:calc(var(--nav-height) + 40px) 24px 60px;}
 }
-body { background: #eef4fb !important; color: #1530a8; }
-.news-section { max-width: 1200px; margin: 0 auto; padding: 60px 48px 100px; }
-.news-list { border-top: 1px solid rgba(21,48,168,0.1); }
-.news-item { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 32px; padding: 28px 0; border-bottom: 1px solid rgba(21,48,168,0.07); text-decoration: none; color: inherit; transition: background 0.2s; }
-.news-item:hover .news-title { color: var(--accent); }
-.news-item:hover .news-arrow { opacity: 1; transform: translateX(4px); }
-.news-date { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; color: var(--mid-gray); letter-spacing: 0.05em; white-space: nowrap; }
-.news-title { font-size: 15px; font-weight: 400; line-height: 1.5; transition: color 0.2s; }
-.news-arrow { opacity: 0.3; font-size: 18px; transition: opacity 0.2s, transform 0.2s; }
-@media(max-width:900px){ .news-section{padding:40px 24px 80px;} .news-item{grid-template-columns:1fr auto;} .news-date{display:none;} }
 </style>
+
 </head>
 <body>
 <nav id="mainNav" class="solid">
@@ -130,51 +125,21 @@ body { background: #eef4fb !important; color: #1530a8; }
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <button class="close-btn" onclick="closeMobileNav()">✕</button>
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="artist.html">Artist</a><a href="news.html">News</a><a href="schedule.html">Schedule</a><a href="audition.html">Audition</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="artist.html">Artist</a><a href="news.html" class="active">News</a><a href="schedule.html">Schedule</a><a href="audition.html">Audition</a>
 </div>
 
-<div style="padding-top:var(--nav-height);">
-  <div class="page-header"><h1>News</h1></div>
-</div>
-
-<div class="news-section">
-  <div class="news-list">
-    <a href="news-oneus-statement.html" class="news-item">
-      <span class="news-date">Feb 9, 2026</span>
-      <span class="news-title">원어스(ONEUS) 계약 관련 비웨이브 엔터테인먼트 공식 입장문 안내</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-oneus-contract.html" class="news-item">
-      <span class="news-date">Feb 5, 2026</span>
-      <span class="news-title">원어스, 신생기획사에서 새출발..토니안 한솥밥 [공식]</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-tonyan-contract.html" class="news-item">
-      <span class="news-date">Nov 3, 2025</span>
-      <span class="news-title">H.O.T 토니안, 비웨이브와 전속계약 체결</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-october-audition.html" class="news-item">
-      <span class="news-date">Oct 1, 2025</span>
-      <span class="news-title">비웨이브 엔터테인먼트 10월 내방오디션 일정 안내</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-rtee-producer.html" class="news-item">
-      <span class="news-date">Aug 26, 2025</span>
-      <span class="news-title">'히트곡 메이커' 알티, 신생 엔터 비웨이브 메인 프로듀서 합류</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-japan-audition.html" class="news-item">
-      <span class="news-date">Jul 17, 2025</span>
-      <span class="news-title">비웨이브 엔터테인먼트, 일본 오디션 투어 개시</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-company-founded.html" class="news-item">
-      <span class="news-date">Jun 18, 2025</span>
-      <span class="news-title">'FNC·RBW 출신' 구본영 대표, 비웨이브 엔터테인먼트 설립</span>
-      <span class="news-arrow">→</span>
-    </a>
+<div class="article-section">
+  <a href="news.html" class="back-link">← News</a>
+  <span class="article-date">Nov 3, 2025</span>
+  <h1 class="article-title">H.O.T 토니안, 비웨이브와 전속계약 체결</h1>
+  <img class="article-img" src="https://cdn.prod.website-files.com/68396e891bed1fac0e519de5/69084596a708718986343c9c_KakaoTalk_20251030_1624498452.jpg" alt="H.O.T 토니안, 비웨이브와 전속계약 체결" onerror="this.style.display='none';">
+  <div class="article-body">
+    <p>그룹 H.O.T 멤버 토니안이 비웨이브 엔터테인먼트와 함께 새로운 여정을 시작한다. 비웨이브 측은 최근 토니안과 전속계약을 체결했다며, 회사의 체계적인 시스템과 토니안의 오랜 업계 경험을 바탕으로 새로운 아티스트를 함께 발굴해 나갈 계획이라고 밝혔다.</p>
+    <p>1996년 H.O.T로 데뷔한 토니안은 K팝의 선두주자이자 한국 대중문화를 이끌어온 인물로, 음악과 방송 등 다양한 활동을 통해 여전히 많은 사랑을 받고 있다.</p>
+    <p>구본영 대표는 이번 계약에 대해 토니안을 "끊임없이 도전하는 아티스트"로 평가하며, 단순한 소속 관계를 넘어 새 시대의 음악 비즈니스를 함께 만들어가고자 한다고 전했다. 토니안 역시 H.O.T 시절부터 음악이 자신의 인생의 중심이었다며, 그간의 경험을 바탕으로 후배 아티스트들과 함께 성장하고 싶다는 뜻을 밝혔다.</p>
+    <p>지난해 6월 출범한 비웨이브에는 정상급 프로듀서 알티가 메인 프로듀서로 합류한 데 이어 이번 토니안의 합류로 라인업을 더욱 확장하게 됐다.</p>
   </div>
+  <p class="article-source">스타투데이 | 지승훈 기자</p>
 </div>
 
 <footer>
@@ -201,4 +166,5 @@ body { background: #eef4fb !important; color: #1530a8; }
   function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.body.style.overflow='';}
 </script>
 </body>
+
 </html>
