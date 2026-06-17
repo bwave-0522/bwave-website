@@ -106,6 +106,7 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
   .news-date { display: none; }
 }
 </style>
+<script src="news-data.js"></script>
 </head>
 <body>
 
@@ -136,43 +137,7 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
 </div>
 
 <div class="news-section">
-  <div class="news-list" id="newsList">
-    <a href="news-oneus-comiccon.html" class="news-item" data-date="2026-06-17">
-      <span class="news-date">Jun 17, 2026</span>
-      <span class="news-title">원어스, 글로벌 점령 나선다! 유럽 대표 페스티벌 'COMIC CON' 헤드라이너 출격</span>
-      <span class="news-arrow">→</span>
-    </a>   
-    <a href="news-hongeunhee-contract.html" class="news-item" data-date="2026-06-16">
-      <span class="news-date">Jun 16, 2026</span>
-      <span class="news-title">'유준상 아내' 홍은희, 20년 인연 나무엑터스와 결별..비웨이브 1호 배우로 새 출발 [공식]</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-oneus-statement.html" class="news-item" data-date="2026-02-09">
-      <span class="news-date">Feb 9, 2026</span>
-      <span class="news-title">원어스(ONEUS) 계약 관련 비웨이브 엔터테인먼트 공식 입장문 안내</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-oneus-contract.html" class="news-item" data-date="2026-02-05">
-      <span class="news-date">Feb 5, 2026</span>
-      <span class="news-title">원어스, 신생기획사에서 새출발..토니안 한솥밥 [공식]</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-tonyan-contract.html" class="news-item" data-date="2025-11-03">
-      <span class="news-date">Nov 3, 2025</span>
-      <span class="news-title">H.O.T 토니안, 비웨이브와 전속계약 체결</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-rtee-producer.html" class="news-item" data-date="2025-08-26">
-      <span class="news-date">Aug 26, 2025</span>
-      <span class="news-title">'히트곡 메이커' 알티, 신생 엔터 비웨이브 메인 프로듀서 합류</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-company-founded.html" class="news-item" data-date="2025-06-18">
-      <span class="news-date">Jun 18, 2025</span>
-      <span class="news-title">'FNC·RBW 출신' 구본영 대표, 비웨이브 엔터테인먼트 설립</span>
-      <span class="news-arrow">→</span>
-    </a>
-  </div>
+  <div class="news-list" id="newsList"></div>
 </div>
 
 <div class="pagination" id="pagination"></div>
@@ -200,25 +165,27 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
   function openMobileNav(){document.getElementById('mobileNav').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.body.style.overflow='';}
 
-  // ===== PAGINATION =====
+  // ===== RENDER + PAGINATION (news-data.js의 NEWS_DATA를 사용) =====
   const ITEMS_PER_PAGE = 5;
   const newsList = document.getElementById('newsList');
   const pagination = document.getElementById('pagination');
-  let allItems = Array.from(newsList.querySelectorAll('.news-item'));
 
-  // 날짜 최신순 정렬 (data-date 기준, 내림차순)
-  allItems.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-  allItems.forEach(item => newsList.appendChild(item));
-
-  const totalPages = Math.max(1, Math.ceil(allItems.length / ITEMS_PER_PAGE));
+  const totalPages = Math.max(1, Math.ceil(NEWS_DATA.length / ITEMS_PER_PAGE));
   let currentPage = 1;
 
   function renderPage(page) {
     currentPage = page;
-    allItems.forEach((item, idx) => {
-      const itemPage = Math.floor(idx / ITEMS_PER_PAGE) + 1;
-      item.style.display = (itemPage === page) ? '' : 'none';
-    });
+    const start = (page - 1) * ITEMS_PER_PAGE;
+    const pageItems = NEWS_DATA.slice(start, start + ITEMS_PER_PAGE);
+
+    newsList.innerHTML = pageItems.map(item => `
+      <a href="${item.href}" class="news-item">
+        <span class="news-date">${item.dateLabel}</span>
+        <span class="news-title">${item.title}</span>
+        <span class="news-arrow">→</span>
+      </a>
+    `).join('');
+
     renderPagination();
   }
 
