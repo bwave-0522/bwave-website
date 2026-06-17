@@ -113,6 +113,25 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
   .profile-grid{grid-template-columns:1fr;gap:32px;padding-bottom:60px;}
   .profile-meta{grid-template-columns:1fr;}
 }
+
+/* ACTIVITY TABS */
+.activity-section { max-width: 1200px; margin: 0 auto; padding: 0 48px 100px; }
+.activity-tabs { display: flex; gap: 8px; flex-wrap: wrap; border-bottom: 1px solid rgba(21,48,168,0.12); margin-bottom: 32px; }
+.activity-tab-btn { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid-gray); background: none; border: none; padding: 14px 18px; cursor: pointer; position: relative; transition: color 0.2s; }
+.activity-tab-btn:hover { color: var(--accent); }
+.activity-tab-btn.active { color: var(--accent); }
+.activity-tab-btn.active::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: var(--accent); }
+.activity-panel { display: none; }
+.activity-panel.active { display: block; }
+.activity-list { display: flex; flex-direction: column; }
+.activity-row { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 16px 0; border-bottom: 1px solid rgba(21,48,168,0.06); }
+.activity-row .a-date { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.activity-row .a-text { font-size: 14px; color: rgba(21,48,168,0.8); line-height: 1.6; }
+@media(max-width:600px){
+  .activity-section{padding:0 24px 60px;}
+  .activity-row{grid-template-columns:80px 1fr; gap:16px;}
+  .activity-tab-btn{padding:12px 12px; font-size:11px;}
+}
 </style>
 
 </head>
@@ -169,6 +188,164 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
     </div>
   </div>
 </div>
+
+<div class="activity-section">
+  <div class="activity-tabs">
+    <button class="activity-tab-btn active" onclick="showTab('program')">Program</button>
+    <button class="activity-tab-btn" onclick="showTab('album')">Album</button>
+    <button class="activity-tab-btn" onclick="showTab('concert')">Concert</button>
+    <button class="activity-tab-btn" onclick="showTab('award')">Award</button>
+    <button class="activity-tab-btn" onclick="showTab('etc')">ETC</button>
+  </div>
+
+  <div class="activity-panel active" id="panel-program">
+    <div class="activity-list">
+      <div class="activity-row"><span class="a-date">2025.01</span><span class="a-text">SBS K-POP 더 비기닝 : SMTOWN 30</span></div>
+      <div class="activity-row"><span class="a-date">2024.05</span><span class="a-text">KBS1 여긴 어디?</span></div>
+      <div class="activity-row"><span class="a-date">2023.06</span><span class="a-text">KBS2 로컬상생 프로젝트 오늘부터 구독중</span></div>
+      <div class="activity-row"><span class="a-date">2023.05</span><span class="a-text">Genie TV 오! 영심이</span></div>
+      <div class="activity-row"><span class="a-date">2021.11</span><span class="a-text">카카오TV 다시, 플라이</span></div>
+      <div class="activity-row"><span class="a-date">2021.09</span><span class="a-text">UMAX 음식의 언어</span></div>
+      <div class="activity-row"><span class="a-date">2020.08</span><span class="a-text">네이버TV 파콘제작소-우리가간다</span></div>
+      <div class="activity-row"><span class="a-date">2020.07</span><span class="a-text">유튜브 토니안 주</span></div>
+      <div class="activity-row"><span class="a-date">2020.06</span><span class="a-text">JTBC 아이돌 피싱캠프</span></div>
+      <div class="activity-row"><span class="a-date">2020.06</span><span class="a-text">SBS Plus 내게 ON 트롯</span></div>
+      <div class="activity-row"><span class="a-date">2019.11</span><span class="a-text">tv조선 쇼핑왕</span></div>
+      <div class="activity-row"><span class="a-date">2019.10</span><span class="a-text">tvN 스윙키즈</span></div>
+      <div class="activity-row"><span class="a-date">2019.06</span><span class="a-text">JTBC2 그랜드 부다개스트</span></div>
+      <div class="activity-row"><span class="a-date">2019.05</span><span class="a-text">tv조선 일단 같이가</span></div>
+      <div class="activity-row"><span class="a-date">2019.03</span><span class="a-text">tvN 문제적 보스</span></div>
+      <div class="activity-row"><span class="a-date">2019.02</span><span class="a-text">SBS Plus 펫츠고! 댕댕트립</span></div>
+      <div class="activity-row"><span class="a-date">2018.07</span><span class="a-text">SBS 정글의 법칙 in 사바</span></div>
+      <div class="activity-row"><span class="a-date">2018.07</span><span class="a-text">JTBC4 인간이 왜 그래</span></div>
+      <div class="activity-row"><span class="a-date">2018.07</span><span class="a-text">SBS TV 동물농장</span></div>
+      <div class="activity-row"><span class="a-date">2018.04</span><span class="a-text">JTBC4 미미샵</span></div>
+      <div class="activity-row"><span class="a-date">2017.03</span><span class="a-text">On Style 립스틱 프린스 2</span></div>
+      <div class="activity-row"><span class="a-date">2017.03</span><span class="a-text">tvN 편의점을 털어라</span></div>
+      <div class="activity-row"><span class="a-date">2016.12</span><span class="a-text">On Style 립스틱 프린스</span></div>
+      <div class="activity-row"><span class="a-date">2016.07</span><span class="a-text">동아tv 맛집남</span></div>
+      <div class="activity-row"><span class="a-date">2016.06</span><span class="a-text">SBS 미운 우리 새끼</span></div>
+      <div class="activity-row"><span class="a-date">2016.06</span><span class="a-text">TRENDY 플랜맨</span></div>
+      <div class="activity-row"><span class="a-date">2016.03</span><span class="a-text">On Style 매력티비</span></div>
+      <div class="activity-row"><span class="a-date">2013.06</span><span class="a-text">MBC 파이널 어드벤처</span></div>
+      <div class="activity-row"><span class="a-date">2013.04</span><span class="a-text">20세기 미소년</span></div>
+      <div class="activity-row"><span class="a-date">2013.02</span><span class="a-text">마스터셰프 코리아 셀러브리티</span></div>
+      <div class="activity-row"><span class="a-date">2012.08</span><span class="a-text">iHQ 100억의 비밀</span></div>
+      <div class="activity-row"><span class="a-date">2012.05</span><span class="a-text">tvN BIG MONEY</span></div>
+      <div class="activity-row"><span class="a-date">2012.05</span><span class="a-text">MBC 댄싱 위드 더 스타 시즌2</span></div>
+      <div class="activity-row"><span class="a-date">2012.04</span><span class="a-text">MBC M 씨크릿 NO.1</span></div>
+      <div class="activity-row"><span class="a-date">2012.03</span><span class="a-text">KBS2 심리 버라이어티 쇼 1억의 초대</span></div>
+      <div class="activity-row"><span class="a-date">2012.01</span><span class="a-text">채널A 특종 연예 인사이드</span></div>
+      <div class="activity-row"><span class="a-date">2012</span><span class="a-text">채널 M 아시아 K팝 스타 헌트 시즌2</span></div>
+      <div class="activity-row"><span class="a-date">2011.12</span><span class="a-text">채널A 아트 스쿨</span></div>
+      <div class="activity-row"><span class="a-date">2011.10</span><span class="a-text">MBC every1 데스캠프 24시</span></div>
+      <div class="activity-row"><span class="a-date">2011.07</span><span class="a-text">tvN Hit the S Style</span></div>
+      <div class="activity-row"><span class="a-date">2011.03</span><span class="a-text">SBS 재미있는 퀴즈클럽</span></div>
+      <div class="activity-row"><span class="a-date">2011.03</span><span class="a-text">Mnet 엠카운트다운</span></div>
+      <div class="activity-row"><span class="a-date">2011.02</span><span class="a-text">tvN 환상의 커플</span></div>
+      <div class="activity-row"><span class="a-date">2010.12</span><span class="a-text">iHQ 리얼탈출쇼 빠삐용</span></div>
+      <div class="activity-row"><span class="a-date">2010.11</span><span class="a-text">MBC 일밤</span></div>
+      <div class="activity-row"><span class="a-date">2010.10</span><span class="a-text">KBS2 백점만점</span></div>
+    </div>
+  </div>
+
+  <div class="activity-panel" id="panel-album">
+    <div class="activity-list">
+      <div class="activity-row"><span class="a-date">2023.06</span><span class="a-text">My Shiny Day</span></div>
+      <div class="activity-row"><span class="a-date">2018.10</span><span class="a-text">HOT Knight (Feat. 양세형)</span></div>
+      <div class="activity-row"><span class="a-date">2017.03</span><span class="a-text">봄이었나봐, 그때</span></div>
+      <div class="activity-row"><span class="a-date">2013.07</span><span class="a-text">I'm Tony An</span></div>
+      <div class="activity-row"><span class="a-date">2012.09</span><span class="a-text">Beautiful Girl</span></div>
+      <div class="activity-row"><span class="a-date">2012.03</span><span class="a-text">Get Your Swag On</span></div>
+      <div class="activity-row"><span class="a-date">2011.04</span><span class="a-text">Top Star</span></div>
+      <div class="activity-row"><span class="a-date">2011.03</span><span class="a-text">Thank U</span></div>
+      <div class="activity-row"><span class="a-date">2010.09</span><span class="a-text">지금 만나러 갑니다</span></div>
+      <div class="activity-row"><span class="a-date">2008.11</span><span class="a-text">Special 앨범</span></div>
+      <div class="activity-row"><span class="a-date">2008.04</span><span class="a-text">우두커니 (2008 스페셜 앨범)</span></div>
+      <div class="activity-row"><span class="a-date">2007.05</span><span class="a-text">Untold Story (Special 앨범)</span></div>
+      <div class="activity-row"><span class="a-date">2006.04</span><span class="a-text">유추프라카치아</span></div>
+      <div class="activity-row"><span class="a-date">2005.11</span><span class="a-text">촌스럽게…Behind The Clouds</span></div>
+      <div class="activity-row"><span class="a-date">2004.10</span><span class="a-text">Believe</span></div>
+      <div class="activity-row"><span class="a-date">2004.10</span><span class="a-text">사랑은 가질 수 없을 때 더 아름답다</span></div>
+      <div class="activity-row"><span class="a-date">2004.10</span><span class="a-text">부탁해</span></div>
+      <div class="activity-row"><span class="a-date">2004.10</span><span class="a-text">Blue Sky</span></div>
+      <div class="activity-row"><span class="a-date">2001.05</span><span class="a-text">H.O.T. Forever</span></div>
+      <div class="activity-row"><span class="a-date">2000.10</span><span class="a-text">Outside Castle</span></div>
+      <div class="activity-row"><span class="a-date">2000.07</span><span class="a-text">Age Of Peace OST</span></div>
+      <div class="activity-row"><span class="a-date">2000.01</span><span class="a-text">H.O.T 99 LIVE IN SEOUL</span></div>
+      <div class="activity-row"><span class="a-date">1999.09</span><span class="a-text">I Yah!</span></div>
+      <div class="activity-row"><span class="a-date">1998.09</span><span class="a-text">Resurrection</span></div>
+      <div class="activity-row"><span class="a-date">1997.07</span><span class="a-text">Wolf And Sheep</span></div>
+      <div class="activity-row"><span class="a-date">1996.09</span><span class="a-text">We Hate All Kinds Of Violence</span></div>
+    </div>
+  </div>
+
+  <div class="activity-panel" id="panel-concert">
+    <div class="activity-list">
+      <div class="activity-row"><span class="a-date">2025.11</span><span class="a-text">HANTEO MUSIC FESTIVAL in Korea – 인천</span></div>
+      <div class="activity-row"><span class="a-date">2025.01</span><span class="a-text">SMTOWN LIVE 2025 in SEOUL</span></div>
+      <div class="activity-row"><span class="a-date">2023.06</span><span class="a-text">2023 토니안 콘서트 'MY MY' – 서울</span></div>
+      <div class="activity-row"><span class="a-date">2019.12</span><span class="a-text">2019 토니안X이재원 with FRIENDS 〈Talk Live〉 랜선탈출 콘서트 in Seoul</span></div>
+      <div class="activity-row"><span class="a-date">2019.09</span><span class="a-text">2019 High-five Of Teenagers 콘서트</span></div>
+      <div class="activity-row"><span class="a-date">2018.10</span><span class="a-text">Forever [High-five Of Teenagers] Concert</span></div>
+      <div class="activity-row"><span class="a-date">2017.11</span><span class="a-text">2017 드림콘서트 in 평창</span></div>
+      <div class="activity-row"><span class="a-date">2017.06</span><span class="a-text">토니안 콘서트</span></div>
+    </div>
+  </div>
+
+  <div class="activity-panel" id="panel-award">
+    <div class="activity-list">
+      <div class="activity-row"><span class="a-date">2018</span><span class="a-text">아시아모델페스티벌 아시아모델어워즈 아시아특별상</span></div>
+      <div class="activity-row"><span class="a-date">2017</span><span class="a-text">SBS 연예대상 쇼토크부문 우수상</span></div>
+      <div class="activity-row"><span class="a-date">2006</span><span class="a-text">제13회 대한민국연예예술상 남자댄스부문 가수상</span></div>
+      <div class="activity-row"><span class="a-date">2003</span><span class="a-text">코리안 뮤직 어워드 올해의 가수상</span></div>
+      <div class="activity-row"><span class="a-date">2003</span><span class="a-text">Mtv 아시아 어워드 한국 최고 인기 아티스트상</span></div>
+      <div class="activity-row"><span class="a-date">2002</span><span class="a-text">MMH 아시아 최고 팝밴드상</span></div>
+      <div class="activity-row"><span class="a-date">2000</span><span class="a-text">MBC 10대 가수상 30대 미만이 뽑은 인기가수상</span></div>
+      <div class="activity-row"><span class="a-date">2000</span><span class="a-text">KMtv 가요대상 네티즌 인기상</span></div>
+      <div class="activity-row"><span class="a-date">2000</span><span class="a-text">KMtv 가요대상 본상</span></div>
+      <div class="activity-row"><span class="a-date">1999</span><span class="a-text">제10회 서울가요대상 본상</span></div>
+      <div class="activity-row"><span class="a-date">1999</span><span class="a-text">KMtv 가요제전 최우수 댄스 가수상</span></div>
+      <div class="activity-row"><span class="a-date">1999</span><span class="a-text">KMtv 가요제전 최우수곡상</span></div>
+      <div class="activity-row"><span class="a-date">1999</span><span class="a-text">KMtv 가요제전 네티즌최고인기상</span></div>
+      <div class="activity-row"><span class="a-date">1999</span><span class="a-text">KMtv 가요제전 ARS 인기상</span></div>
+      <div class="activity-row"><span class="a-date">1999</span><span class="a-text">Mnet 영상음악대상 시청자 최고 인기상</span></div>
+      <div class="activity-row"><span class="a-date">1999</span><span class="a-text">대한민국 영상음반대상 골든디스크상 본상</span></div>
+      <div class="activity-row"><span class="a-date">1999</span><span class="a-text">대한민국 연예예술상 대상</span></div>
+      <div class="activity-row"><span class="a-date">1998</span><span class="a-text">한국경제소비자대상 음반부문</span></div>
+      <div class="activity-row"><span class="a-date">1998</span><span class="a-text">MBC 가요제전 대상</span></div>
+      <div class="activity-row"><span class="a-date">1998</span><span class="a-text">KBS 가요대상 대상</span></div>
+      <div class="activity-row"><span class="a-date">1998</span><span class="a-text">제9회 서울가요대상 대상</span></div>
+      <div class="activity-row"><span class="a-date">1998</span><span class="a-text">대한민국 영상음반대상 골든디스크 부문 본상</span></div>
+      <div class="activity-row"><span class="a-date">1998</span><span class="a-text">SBS 가요대전 대상</span></div>
+      <div class="activity-row"><span class="a-date">1998</span><span class="a-text">KMtv 가요대전 대상</span></div>
+      <div class="activity-row"><span class="a-date">1997</span><span class="a-text">MBC 가요제전 가수상</span></div>
+      <div class="activity-row"><span class="a-date">1997</span><span class="a-text">KBS 가요대상 올해의 가수상</span></div>
+      <div class="activity-row"><span class="a-date">1997</span><span class="a-text">대한민국 영상음반대상 골든디스크상 대상</span></div>
+      <div class="activity-row"><span class="a-date">1997</span><span class="a-text">서울 가요대상 올해의 최고 가요 대상</span></div>
+      <div class="activity-row"><span class="a-date">1997</span><span class="a-text">제8회 서울가요대상 대상</span></div>
+      <div class="activity-row"><span class="a-date">1996</span><span class="a-text">KMtv 가요대전 인기가수상</span></div>
+      <div class="activity-row"><span class="a-date">1996</span><span class="a-text">SBS 10대 가수 가요대전 신인가수상</span></div>
+      <div class="activity-row"><span class="a-date">1996</span><span class="a-text">대한민국 영상음반대상 골든디스크 부문 SKC 신인상</span></div>
+    </div>
+  </div>
+
+  <div class="activity-panel" id="panel-etc">
+    <div class="activity-list">
+      <div class="activity-row"><span class="a-date">2006</span><span class="a-text">싱가포르 명예 홍보대사</span></div>
+      <div class="activity-row"><span class="a-date">2005</span><span class="a-text">태국정부관광청 파타야 뮤직 페스티벌 한국 대표</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function showTab(name) {
+  document.querySelectorAll('.activity-tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.activity-panel').forEach(p => p.classList.remove('active'));
+  document.querySelector(`.activity-tab-btn[onclick="showTab('${name}')"]`).classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+}
+</script>
 
 <footer>
   <div class="footer-inner">
