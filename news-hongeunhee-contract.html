@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News – B.Wave Entertainment</title>
+<title>'유준상 아내' 홍은희, 20년 인연 나무엑터스와 결별..비웨이브 1호 배우로 새 출발 [공식] – B.Wave Entertainment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -41,25 +41,6 @@ nav.solid { background: rgba(238,244,251,0.92); backdrop-filter: blur(12px); bor
 .page-header { padding: calc(var(--nav-height) + 60px) 48px 60px; border-bottom: 1px solid rgba(21,48,168,0.08); }
 .page-header h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(48px, 8vw, 100px); font-weight: 800; letter-spacing: -0.02em; text-transform: uppercase; line-height: 1; }
 
-/* NEWS LIST */
-.news-section { max-width: 1200px; margin: 0 auto; padding: 60px 48px 60px; }
-.news-list { border-top: 1px solid rgba(21,48,168,0.1); }
-.news-item { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 32px; padding: 28px 0; border-bottom: 1px solid rgba(21,48,168,0.07); text-decoration: none; color: inherit; transition: background 0.2s; }
-.news-item:hover .news-title { color: var(--accent); }
-.news-item:hover .news-arrow { opacity: 1; transform: translateX(4px); }
-.news-date { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; color: var(--mid-gray); letter-spacing: 0.05em; white-space: nowrap; }
-.news-title { font-size: 15px; font-weight: 400; line-height: 1.5; transition: color 0.2s; }
-.news-arrow { opacity: 0.3; font-size: 18px; transition: opacity 0.2s, transform 0.2s; }
-
-/* PAGINATION */
-.pagination { display: flex; justify-content: center; align-items: center; gap: 8px; max-width: 1200px; margin: 50px auto 100px; padding: 0 48px; }
-.page-btn { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--mid-gray); background: none; border: 1px solid rgba(21,48,168,0.15); width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; }
-.page-btn:hover { border-color: var(--accent); color: var(--accent); }
-.page-btn.active { background: var(--accent); color: #ffffff; border-color: var(--accent); }
-.page-btn.nav-arrow { border: none; font-size: 16px; }
-.page-btn.nav-arrow:disabled { opacity: 0.25; cursor: not-allowed; }
-.page-btn.nav-arrow:disabled:hover { border-color: transparent; color: var(--mid-gray); }
-
 /* FOOTER */
 footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); padding: 60px 48px 40px; }
 .footer-inner { max-width: 1200px; margin: 0 auto; }
@@ -87,37 +68,53 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
 .mobile-nav a { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); text-decoration: none; }
 .mobile-nav .close-btn { position: absolute; top: 24px; right: 32px; background: none; border: none; color: var(--white); font-size: 28px; cursor: pointer; }
 
+/* UTILS */
+.btn-outline { display: inline-flex; align-items: center; gap: 12px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid; padding-bottom: 4px; transition: gap 0.2s, color 0.2s; }
+.btn-outline::after { content: '→'; }
+.btn-outline:hover { gap: 20px; }
+.btn-outline.dark { color: var(--black); border-color: var(--black); }
+.btn-outline.dark:hover { color: var(--accent); border-color: var(--accent); }
+.btn-outline.light { color: var(--white); border-color: rgba(21,48,168,0.45); }
+.btn-outline.light:hover { color: var(--accent); border-color: var(--accent); }
+.section-tag { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 16px; }
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-social { display: none; }
   .hamburger { display: flex; }
   .page-header { padding: calc(var(--nav-height) + 40px) 24px 40px; }
-  .news-section { padding: 40px 24px 40px; }
-  .pagination { padding: 0 24px; }
   footer { padding: 48px 24px 32px; }
   nav { padding: 0 24px; }
   .footer-top { flex-direction: column; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 16px; align-items: flex-start; }
   .footer-nav { flex-wrap: wrap; }
 }
+
+</style>
+
+<style>
+.article-section { max-width: 760px; margin: 0 auto; padding: calc(var(--nav-height) + 60px) 48px 100px; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid-gray); text-decoration: none; margin-bottom: 32px; }
+.back-link:hover { color: var(--accent); }
+.article-date { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; margin-bottom: 16px; display: block; }
+.article-title { font-size: clamp(24px, 4vw, 36px); font-weight: 700; line-height: 1.4; margin-bottom: 32px; }
+.article-img { width: 100%; border-radius: 0; margin-bottom: 36px; display: block; background: #dce6f9; }
+.article-body p { font-size: 15px; line-height: 1.95; color: rgba(21,48,168,0.82); font-weight: 300; margin-bottom: 22px; }
+.article-body ul { margin: 0 0 22px; padding-left: 20px; }
+.article-body li { font-size: 15px; line-height: 1.9; color: rgba(21,48,168,0.82); font-weight: 300; margin-bottom: 8px; }
+.article-source { font-size: 13px; color: var(--mid-gray); margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(21,48,168,0.08); }
 @media(max-width:600px){
-  .news-item { grid-template-columns: 1fr auto; }
-  .news-date { display: none; }
+  .article-section{padding:calc(var(--nav-height) + 40px) 24px 60px;}
 }
 </style>
+
 </head>
 <body>
-
 <nav id="mainNav" class="solid">
   <a href="index.html" class="nav-logo"><img src="https://cdn.prod.website-files.com/68396e891bed1fac0e519d71/6839758199ace6bac0c74688_%EC%9E%90%EC%82%B0%201.svg" alt="B.Wave Entertainment"></a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="artist.html">Artist</a></li>
-    <li><a href="news.html" class="active">News</a></li>
-    <li><a href="schedule.html">Schedule</a></li>
-    <li><a href="audition.html">Audition</a></li>
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="artist.html">Artist</a></li><li><a href="news.html" class="active">News</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="audition.html">Audition</a></li>
   </ul>
   <div class="nav-social">
     <a href="https://www.youtube.com/@ONEUS" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.9a3 3 0 0 0-2.1-2.1C19.5 4.3 12 4.3 12 4.3s-7.5 0-9.4.5A3 3 0 0 0 .5 6.9C0 8.8 0 12 0 12s0 3.2.5 5.1a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.2 24 12 24 12s0-3.2-.5-5.1zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg></a>
@@ -128,59 +125,22 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <button class="close-btn" onclick="closeMobileNav()">✕</button>
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="artist.html">Artist</a><a href="news.html">News</a><a href="schedule.html">Schedule</a><a href="audition.html">Audition</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="artist.html">Artist</a><a href="news.html" class="active">News</a><a href="schedule.html">Schedule</a><a href="audition.html">Audition</a>
 </div>
 
-<div style="padding-top:var(--nav-height);">
-  <div class="page-header"><h1>News</h1></div>
-</div>
-
-<div class="news-section">
-  <div class="news-list" id="newsList">
-    <a href="news-hongeunhee-contract.html" class="news-item" data-date="2026-06-16">
-      <span class="news-date">Jun 16, 2026</span>
-      <span class="news-title">'유준상 아내' 홍은희, 20년 인연 나무엑터스와 결별..비웨이브 1호 배우로 새 출발 [공식]</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-oneus-statement.html" class="news-item" data-date="2026-02-09">
-      <span class="news-date">Feb 9, 2026</span>
-      <span class="news-title">원어스(ONEUS) 계약 관련 비웨이브 엔터테인먼트 공식 입장문 안내</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-oneus-contract.html" class="news-item" data-date="2026-02-05">
-      <span class="news-date">Feb 5, 2026</span>
-      <span class="news-title">원어스, 신생기획사에서 새출발..토니안 한솥밥 [공식]</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-tonyan-contract.html" class="news-item" data-date="2025-11-03">
-      <span class="news-date">Nov 3, 2025</span>
-      <span class="news-title">H.O.T 토니안, 비웨이브와 전속계약 체결</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-october-audition.html" class="news-item" data-date="2025-10-01">
-      <span class="news-date">Oct 1, 2025</span>
-      <span class="news-title">비웨이브 엔터테인먼트 10월 내방오디션 일정 안내</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-rtee-producer.html" class="news-item" data-date="2025-08-26">
-      <span class="news-date">Aug 26, 2025</span>
-      <span class="news-title">'히트곡 메이커' 알티, 신생 엔터 비웨이브 메인 프로듀서 합류</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-japan-audition.html" class="news-item" data-date="2025-07-17">
-      <span class="news-date">Jul 17, 2025</span>
-      <span class="news-title">비웨이브 엔터테인먼트, 일본 오디션 투어 개시</span>
-      <span class="news-arrow">→</span>
-    </a>
-    <a href="news-company-founded.html" class="news-item" data-date="2025-06-18">
-      <span class="news-date">Jun 18, 2025</span>
-      <span class="news-title">'FNC·RBW 출신' 구본영 대표, 비웨이브 엔터테인먼트 설립</span>
-      <span class="news-arrow">→</span>
-    </a>
+<div class="article-section">
+  <a href="news.html" class="back-link">← News</a>
+  <span class="article-date">Jun 16, 2026</span>
+  <h1 class="article-title">'유준상 아내' 홍은희, 20년 인연 나무엑터스와 결별..비웨이브 1호 배우로 새 출발 [공식]</h1>
+  <img class="article-img" src="https://cdn.prod.website-files.com/68396e891bed1fac0e519de5/6852891074c32db80129af65_B.Wave_CI_RGB.jpg" alt="홍은희, 비웨이브 1호 배우로 새 출발" onerror="this.style.display='none';">
+  <div class="article-body">
+    <p>배우 홍은희가 20년 가까이 함께한 나무엑터스를 떠나 비웨이브 엔터테인먼트와 새 출발을 알렸다. 비웨이브 구본영 대표는 최근 홍은희와 전속계약을 체결했다고 밝히며, 오랜 시간 쌓아온 연기 내공으로 안방극장에서 남다른 존재감을 보여준 그가 앞으로도 다양한 활약을 펼칠 수 있도록 지원을 아끼지 않겠다고 전했다. 이로써 홍은희는 비웨이브의 1호 배우로 새로운 여정을 시작하게 됐다.</p>
+    <p>1998년 MBC 27기 공채 탤런트로 데뷔한 홍은희는 '워킹 맘 육아 대디', '나쁜 형사', '오케이 광자매', '고백의 역사' 등 다양한 장르의 작품에서 폭넓은 연기력을 선보이며 대한민국을 대표하는 배우 중 한 명으로 자리매김해왔다. 최근에는 tvN 새 드라마 '나의 유죄인간' 촬영을 마치고 새로운 모습으로 시청자들을 만날 준비를 하고 있다.</p>
+    <p>배우 활동 외에도 홍은희는 '기분 좋은 날', '현장토크쇼 택시', '위대한 유산', '구해줘! 홈즈' 등 여러 프로그램의 진행을 맡아 방송인으로서도 활발한 행보를 이어왔다.</p>
+    <p>이번 합류로 비웨이브에는 H.O.T 출신 토니안, 프로듀서 알티, 그룹 원어스에 이어 첫 배우 라인업이 더해지게 됐다.</p>
   </div>
+  <p class="article-source">전자신문 | 비웨이브 엔터테인먼트 보도자료 종합</p>
 </div>
-
-<div class="pagination" id="pagination"></div>
 
 <footer>
   <div class="footer-inner">
@@ -204,57 +164,7 @@ footer { background: #ffffff; border-top: 1px solid rgba(21,48,168,0.08); paddin
   window.addEventListener('scroll',()=>{ document.getElementById('backTop').classList.toggle('visible',window.scrollY>60); });
   function openMobileNav(){document.getElementById('mobileNav').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.body.style.overflow='';}
-
-  // ===== PAGINATION =====
-  const ITEMS_PER_PAGE = 5;
-  const newsList = document.getElementById('newsList');
-  const pagination = document.getElementById('pagination');
-  let allItems = Array.from(newsList.querySelectorAll('.news-item'));
-
-  // 날짜 최신순 정렬 (data-date 기준, 내림차순)
-  allItems.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-  allItems.forEach(item => newsList.appendChild(item));
-
-  const totalPages = Math.max(1, Math.ceil(allItems.length / ITEMS_PER_PAGE));
-  let currentPage = 1;
-
-  function renderPage(page) {
-    currentPage = page;
-    allItems.forEach((item, idx) => {
-      const itemPage = Math.floor(idx / ITEMS_PER_PAGE) + 1;
-      item.style.display = (itemPage === page) ? '' : 'none';
-    });
-    renderPagination();
-  }
-
-  function renderPagination() {
-    pagination.innerHTML = '';
-    if (totalPages <= 1) return;
-
-    const prevBtn = document.createElement('button');
-    prevBtn.className = 'page-btn nav-arrow';
-    prevBtn.textContent = '←';
-    prevBtn.disabled = currentPage === 1;
-    prevBtn.onclick = () => renderPage(currentPage - 1);
-    pagination.appendChild(prevBtn);
-
-    for (let i = 1; i <= totalPages; i++) {
-      const btn = document.createElement('button');
-      btn.className = 'page-btn' + (i === currentPage ? ' active' : '');
-      btn.textContent = i;
-      btn.onclick = () => renderPage(i);
-      pagination.appendChild(btn);
-    }
-
-    const nextBtn = document.createElement('button');
-    nextBtn.className = 'page-btn nav-arrow';
-    nextBtn.textContent = '→';
-    nextBtn.disabled = currentPage === totalPages;
-    nextBtn.onclick = () => renderPage(currentPage + 1);
-    pagination.appendChild(nextBtn);
-  }
-
-  renderPage(1);
 </script>
 </body>
+
 </html>
