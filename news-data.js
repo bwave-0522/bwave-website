@@ -39,22 +39,10 @@ const NEWS_DATA = [
     title: "H.O.T 토니안, 비웨이브와 전속계약 체결"
   },
   {
-    href: "news-october-audition.html",
-    date: "2025-10-01",
-    dateLabel: "Oct 1, 2025",
-    title: "비웨이브 엔터테인먼트 10월 내방오디션 일정 안내"
-  },
-  {
     href: "news-rtee-producer.html",
     date: "2025-08-26",
     dateLabel: "Aug 26, 2025",
     title: "'히트곡 메이커' 알티, 신생 엔터 비웨이브 메인 프로듀서 합류"
-  },
-  {
-    href: "news-japan-audition.html",
-    date: "2025-07-17",
-    dateLabel: "Jul 17, 2025",
-    title: "비웨이브 엔터테인먼트, 일본 오디션 투어 개시"
   },
   {
     href: "news-company-founded.html",
